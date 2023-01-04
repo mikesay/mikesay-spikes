@@ -1,0 +1,15 @@
+# runnerdeployment.yaml
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: mikesay-runner
+  namespace: actions-runner-system
+spec:
+  replicas: 1
+  template:
+    spec:
+      organization: mikesay
+      group: default
+      labels:
+        - mikesay
+      env: []
