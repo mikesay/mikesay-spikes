@@ -19,3 +19,9 @@ jobs:
 
     - name: Print readme
       run: cat README.md
+
+    - name: Save data
+      run: |
+        echo "Job Name: deploy" >> /runner/data/history
+        echo "Job ID: ${GITHUB_JOB}" >> /runner/data/history
+        echo "Runner Name: ${RUNNER_NAME}" >> /runner/data/history
