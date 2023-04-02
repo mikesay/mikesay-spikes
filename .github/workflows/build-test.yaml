@@ -22,6 +22,6 @@ jobs:
 
     - name: Save data
       run: |
-        echo "Job Name: deploy" >> /runner/data/history
-        echo "Job ID: ${GITHUB_JOB}" >> /runner/data/history
+        echo "Run Number: ${GITHUB_RUN_NUMBER}" >> /runner/data/history
+        echo "Job Name: ${GITHUB_JOB}" >> /runner/data/history
         echo "Runner Name: ${RUNNER_NAME}" >> /runner/data/history
